@@ -24,7 +24,7 @@ public class TAreaInfo extends BaseEntity{
 
     private String areaMemoInfo;
 
-    private Date areaCreateTime;
+    private String areaCreateTime;
 
     private String areaStopFlag;
 
@@ -84,15 +84,23 @@ public class TAreaInfo extends BaseEntity{
         this.areaMemoInfo = areaMemoInfo == null ? null : areaMemoInfo.trim();
     }
 
-    public Date getAreaCreateTime() {
-        return areaCreateTime;
-    }
 
-    public void setAreaCreateTime(Date areaCreateTime) {
-        this.areaCreateTime = areaCreateTime;
-    }
 
-    public String getAreaStopFlag() {
+    /**
+	 * @return the areaCreateTime
+	 */
+	public String getAreaCreateTime() {
+		return areaCreateTime;
+	}
+
+	/**
+	 * @param areaCreateTime the areaCreateTime to set
+	 */
+	public void setAreaCreateTime(String areaCreateTime) {
+		this.areaCreateTime = areaCreateTime;
+	}
+
+	public String getAreaStopFlag() {
         return areaStopFlag;
     }
 

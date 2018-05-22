@@ -5,6 +5,7 @@ import java.util.Map;
 
 import com.ants.common.page.PageBean;
 import com.ants.common.page.PageParam;
+import com.ants.facade.user.entity.TAreaInfo;
 import com.ants.facade.user.entity.TJobInfo;
 
 /**
@@ -15,6 +16,11 @@ import com.ants.facade.user.entity.TJobInfo;
  * 
  */
 public interface TJobInfoFacede {
+	
+	// 查询所有职位分类信息
+	List<TAreaInfo> selectTJobInfoList(Map<String, Object> map);
+
+	long selectTJobInfoCount(Map<String, Object> map);
 	
 	//根据职位分类ID查找自己包括上级目录的职位名
 	List<Map<String,String>> searchJobNameById(Map<String,String> mapCon);

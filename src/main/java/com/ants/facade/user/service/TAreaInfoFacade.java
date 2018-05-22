@@ -31,6 +31,9 @@ import com.ants.facade.user.entity.TAreaInfo;
  */
 public interface TAreaInfoFacade {
 	
+	//查询所有区域信息
+	List<TAreaInfo>selectTAreaInfoList(Map<String,Object> map);
+	long selectTAreaInfoCount(Map<String,Object> map);
 	//根据职位分类ID查找自己包括上级目录的职位名
 	List<Map<String,String>> searchAreaNameById(Map<String,String> mapCon);
 	

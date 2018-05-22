@@ -1,5 +1,8 @@
 package com.ants.facade.user.service;
 
+import java.util.List;
+import java.util.Map;
+
 import com.ants.facade.user.entity.TCompanyInfo;
 
 /**
@@ -10,6 +13,11 @@ import com.ants.facade.user.entity.TCompanyInfo;
  * 
  */
 public interface TCompanyInfoFacade {
+	
+	public List<TCompanyInfo> selectManageCoInfoByMapList(Map<String,Object> map);
+	public long selectManageCoInfoByMapCount(Map<String,Object> map);
+	
+	TCompanyInfo selectTComInfoByUMap(Map<String,Object> map);
 	
 	TCompanyInfo selectTComInfoByUId(Integer uId);
 	

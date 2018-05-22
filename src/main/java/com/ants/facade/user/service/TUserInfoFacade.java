@@ -1,5 +1,9 @@
 package com.ants.facade.user.service;
 
+import java.util.List;
+import java.util.Map;
+
+import com.ants.facade.user.entity.TFeedInfo;
 import com.ants.facade.user.entity.TUserInfo;
 
 /**  
@@ -10,6 +14,13 @@ import com.ants.facade.user.entity.TUserInfo;
  *    
  */
 public interface TUserInfoFacade {
+	
+	//管理员用户信息管理，查找求职会员和公司会员
+	public List<TFeedInfo> selectManageUInfoByMapList(Map<String, Object> testMap);
+	public long selectManageUInfoByMapCount(Map<String, Object> testMap);
+	
+	//根据条件查询最近七天的求职会员和公司会员注册数
+	public List<Map<String,String>> searchSevenDayCount(Map<String,String> map);
 	
 	//登录时根据用户名、邮箱或者手机号查找用户信息
 	public TUserInfo findUserByUserId(String sqlName, String parameter);

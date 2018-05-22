@@ -1,5 +1,9 @@
 package com.ants.facade.user.service;
 
+import java.util.List;
+import java.util.Map;
+
+import com.ants.facade.user.entity.TRecruitInfo;
 import com.ants.facade.user.entity.TWorkShow;
 
 /**  
@@ -10,9 +14,15 @@ import com.ants.facade.user.entity.TWorkShow;
  *    
  */
 public interface TWorkShowFacade {
-    int deleteByPrimaryKey(Integer workId);
+	
+	public List<TWorkShow> selectManageWorkShowInfoByMapList(Map<String, Object> map);
+	public long selectManageWorkShowInfoByMapCount(Map<String, Object> map);
+	
+	long insert(TWorkShow record);
+	
+	List<Map<String,String>> selectTWorkShowListByUId(Integer uId);
 
-    long insert(TWorkShow record);
+    int deleteByPrimaryKey(Integer workId);
 
     int insertSelective(TWorkShow record);
 

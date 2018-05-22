@@ -29,7 +29,7 @@ public class TJobInfo extends BaseEntity{
 
 	private String jobMemo;//备注
 
-	private Date jobCreateTime;//职位创建时间
+	private String jobCreateTime;//职位创建时间
 
 	private String jobStopFlag;//职位是否通用 0：正常 9：停用
 
@@ -81,11 +81,19 @@ public class TJobInfo extends BaseEntity{
 		this.jobMemo = jobMemo == null ? null : jobMemo.trim();
 	}
 
-	public Date getJobCreateTime() {
+	
+
+	/**
+	 * @return the jobCreateTime
+	 */
+	public String getJobCreateTime() {
 		return jobCreateTime;
 	}
 
-	public void setJobCreateTime(Date jobCreateTime) {
+	/**
+	 * @param jobCreateTime the jobCreateTime to set
+	 */
+	public void setJobCreateTime(String jobCreateTime) {
 		this.jobCreateTime = jobCreateTime;
 	}
 
